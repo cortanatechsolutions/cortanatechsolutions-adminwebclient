@@ -1,10 +1,10 @@
-name: Deploy dist folder to GitHub Pages
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,19 +28,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: npm install # Replace with your build dependencies installation command
-
-      - name: Build project
-        run: npm run build # Replace with your build script command
-        working-directory: ./ # Specify the directory where package.json is located
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
-          name: github-pages # Name of the artifact to upload
-          path: dist # Path to the directory or file to upload (adjust as needed)
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
   # Deployment job
   deploy:
@@ -50,16 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2 # Checkout the repository to access built files
-
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages # Name of the artifact to download
-
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          branch: gh-pages # Ensure this matches your GitHub Pages branch setup
-          folder: dist # Specify the folder to deploy
