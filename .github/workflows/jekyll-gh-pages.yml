@@ -31,12 +31,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npm run build
-        with:
-          source: ./
-          destination: ./dist
+        run: npm run build  # Replace with your build script command
+        working-directory: ./  # Specify the directory where package.json is located
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+          path: dist          # Path to the directory or file to upload (adjust as needed)
 
   # Deployment job
   deploy:
