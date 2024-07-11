@@ -36,11 +36,6 @@ jobs:
         run: npm run build # Replace with your build script command
         working-directory: ./ # Specify the directory where package.json is located
 
-      - name: Prepare dist directory
-        run: |
-          mv ./path/to/your/build/directory/* ./dist/
-        working-directory: ./ # Adjust path to your build output directory
-
   # Deployment job
   deploy:
     environment:
