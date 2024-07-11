@@ -1,7 +1,3 @@
-import KTDom from "../../core/helpers/dom.ts";
-import { KTMenu } from "../../core/components/menu/menu.ts";
-import { KTToggle } from "../../core/components/toggle/toggle.ts";
-
 class KTLayout {
   static _isSidebarCollapse() {
     return document.body.classList.contains("sidebar-collapse");
@@ -66,5 +62,9 @@ class KTLayout {
     return this._isSidebarCollapse();
   }
 }
+
+KTDom.ready(() => {
+  KTLayout.init();
+});
 
 export default KTLayout;

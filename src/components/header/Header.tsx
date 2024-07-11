@@ -3567,7 +3567,7 @@ function Header() {
                                 className="bg-cover bg-no-repeat card-rounded-t shrink-0 h-24"
                                 style={{
                                   backgroundImage:
-                                    'url("/static/metronic-tailwind-html/dist//media/images/600x600/6.jpg")',
+                                    'url("/media/images/600x600/6.jpg")',
                                 }}
                               ></div>
                               <div className="px-2.5 pb-2">
@@ -3590,7 +3590,7 @@ function Header() {
                                 className="bg-cover bg-no-repeat card-rounded-t shrink-0 h-24"
                                 style={{
                                   backgroundImage:
-                                    'url("/static/metronic-tailwind-html/dist//media/images/600x600/1.jpg")',
+                                    'url("/media/images/600x600/1.jpg")',
                                 }}
                               ></div>
                               <div className="px-2.5 pb-2">

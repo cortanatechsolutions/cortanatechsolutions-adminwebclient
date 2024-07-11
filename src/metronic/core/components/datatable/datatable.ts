@@ -3,7 +3,7 @@ import { KTDataTableDataInterface, KTDataTableInterface, KTDataTableConfigInterf
 import KTEventHandler from '../../helpers/event-handler';
 import { KTDatatableCheckChangePayloadInterface } from './types';
 import KTUtils from '../../helpers/utils';
-import KTComponents from '../..';
+import KTComponents from '../../index';
 import KTData from '../../helpers/data';
 
 /**

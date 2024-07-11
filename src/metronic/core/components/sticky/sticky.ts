@@ -3,7 +3,7 @@
 
 import KTData from '../../helpers/data';
 import KTDom from '../../helpers/dom';
-import { KTUtils } from '../../index';
+import KTUtils from '../../helpers/utils';
 import KTComponent from '../component';
 import { KTStickyInterface, KTStickyConfigInterface } from './types';
 
