@@ -35,6 +35,7 @@ jobs:
         working-directory: ./  # Specify the directory where package.json is located
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+          name: github-pages  # Name of the artifact to upload
           path: dist          # Path to the directory or file to upload (adjust as needed)
 
   # Deployment job
