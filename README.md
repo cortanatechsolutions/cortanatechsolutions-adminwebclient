@@ -1,6 +1,6 @@
 <p>
 	<a href="https://adminclient.cortanatechconsulting.com/">
-		<img src="https://adminclient.cortanatechconsulting.com//media/app/default-logo.svg" alt="Metronic"/>
+		<img src="https://adminclient.cortanatechconsulting.com//media/app/default-logo-dark.svg" alt="Metronic"/>
 	</a>
 </p>
 
